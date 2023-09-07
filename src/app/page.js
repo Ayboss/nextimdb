@@ -20,13 +20,17 @@ export default async function Home({ searchParams }) {
       ? "https://api.themoviedb.org/3/trending/all/day?language=en-US"
       : "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
   const response = await fetch(url, options);
+
+  if (!response.ok) {
+    throw new Error();
+  }
   const data = await response.json();
   // console.log(data);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {/* <> */}
-      <Result />
+      <Result result={data.results} />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 function Result({ result }) {
-  return <div>jjjj</div>;
+  return result?.map((movie) => <p>{movie.title}</p>);
 }
 
 export default Result;
