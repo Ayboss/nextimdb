@@ -1,6 +1,10 @@
 import React from "react";
 
 function page() {
+  for (let i = 0; i++; i < 100000000000000000) {
+    continue;
+  }
+
   return (
     <div className="max-w-6xl mx-auto space-y-4 p-4">
       <h1 className="text-amber-500 font-medium text-2xl uppercase">About</h1>

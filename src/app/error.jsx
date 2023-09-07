@@ -5,6 +5,7 @@ function error({ error, reset }) {
   useEffect(() => {
     console.log(error);
   }, [error]);
+
   return (
     <div className="text-center py-5">
       <p className="pb-1">Something went wrong somewhere</p>
