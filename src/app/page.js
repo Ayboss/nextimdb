@@ -25,10 +25,10 @@ export default async function Home({ searchParams }) {
     throw new Error();
   }
   const data = await response.json();
-  // console.log(data);
+  console.log(data);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
       {/* <> */}
       <Result result={data.results} />
     </main>

@@ -16,6 +16,13 @@
   }
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+
 body {
   /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
